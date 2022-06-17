@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title> Subtraction </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body background = "math.png">
+        <center>
+            <h2 class="btn btn-info"> Subtraction
+                <br>
+                Type your number in and press the calculate button
+            </h2>
+            <br><br>
+            <a href="index.html" class="btn btn-info">Back</a>
+            <h2 style="color: white;"> 
+                <input type = "text" class = "form-control ibox" id="sub_1" placeholder="Type your first number here">
+            
+                -
+
+                <input type = "text" class = "form-control ibox" id="sub_2" placeholder="Type your second number here">
+
+            
+            </h2>
+            <br><br>
+            <p id="answer"> </p>
+
+            <br><br>
+            <button class="btn btn-success" onclick="calculate();">Calculate</button>
+        </center>
+        <script>
+            function calculate(){
+                s1 = Number(document.getElementById("sub_1").value)
+                s2 = Number(document.getElementById("sub_2").value)
+
+                answer = s1 - s2;
+
+                document.getElementById("answer").innerHTML = answer;
+            }
+        </script>
+    </body>
+</html>
